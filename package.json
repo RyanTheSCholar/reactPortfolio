@@ -15,6 +15,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "github:fortawesome/react-fontawesome",
     "@nextui-org/react": "^2.1.12",
+    "@nextui-org/ripple": "^2.0.21",
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -5,6 +5,7 @@ import { NextUIProvider } from '@nextui-org/react';
 import App from './App.jsx'
 import './index.css'
 import About from './pages/About/About.jsx';
+import Contact from './pages/Contact/Contact.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/Contact',
-        // element: <Contact />
+        element: <Contact />
       },
       {
         path: '/Resume',
