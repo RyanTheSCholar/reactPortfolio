@@ -1,0 +1,13 @@
+.max-w-\[1024px\] {
+    max-width: 100% !important;
+}
+.gap-4{
+    gap: 2rem !important;
+}
+header{
+    padding-left: 1rem !important;
+    padding-right: 1.5rem !important;
+}
+.data-\[justify\=start\]\:justify-start[data-justify=start] {
+    justify-content: center !important;
+}

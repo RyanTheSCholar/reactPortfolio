@@ -1,8 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { NextUIProvider } from '@nextui-org/react';
 import App from './App.jsx'
 import './index.css'
+import About from './pages/About/About.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -11,19 +13,19 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        // element: <About />
+        element: <About />
       },
       {
         path: '/Portfolio',
-        // element: < Portfolio/>
+        // element: <Portfolio />
       },
       {
         path: '/Contact',
-        // element: <Contact/>
+        // element: <Contact />
       },
       {
         path: '/Resume',
-        // element: < Resume/>
+        // element: <Resume />
       }
 
     ],
@@ -31,6 +33,8 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <NextUIProvider>
+      <RouterProvider router={router} />
+    </NextUIProvider>
   </React.StrictMode>,
 )

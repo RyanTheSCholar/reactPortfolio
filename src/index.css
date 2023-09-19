@@ -1,1 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* .bg-default-200 {
+    --tw-bg-opacity: 1;
+    background-color: purple !important;
+} */
