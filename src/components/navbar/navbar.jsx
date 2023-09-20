@@ -5,7 +5,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
@@ -39,7 +38,7 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
     {
       id: 4,
       path: "/Contact",
-      pathname: "Contact Me",
+      pathname: "Contact",
     },
   ];
   const handleMenuItemClick = () => {
