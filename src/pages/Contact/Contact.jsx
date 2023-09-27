@@ -1,5 +1,5 @@
 import { Card, Input, Textarea, Button } from "@nextui-org/react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect} from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -9,6 +9,19 @@ export default function Contact() {
   const [userName, setuserName] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const change = () => {
+      if (window.innerWidth <= 768) {
+        setIsMobile(false);
+      } else {
+        setIsMobile(true);
+      }
+    };
+    window.addEventListener("resize", change);
+    return () => window.removeEventListener("resize", change);
+  }, []);
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -43,11 +56,11 @@ try {
   };
   return (
     <Card className="portfolio-theme flex w-full h-[100vh] bg-Yellow-200 rounded-none items-center justify-center">
-      <div className="flex flex-col">
+      <div className="flex flex-col mx-auto">
         <h1 className="text-[32px] font-bold text-Blue-900 flex justify-center">
           Get in touch with me here!
         </h1>
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail} className="">
           <div>
             <Input
               isRequired
@@ -76,7 +89,7 @@ try {
                   "dark:group-data-[focused=true]:bg-default/60",
                   "!cursor-text",
                 ],
-                base: ["w-[50vw]", "my-3"],
+                base: ["my-3", isMobile ? "w-[50vw]" : "w-full"],
               }}
               radius="lg"
             />
@@ -109,7 +122,7 @@ try {
                   "dark:group-data-[focused=true]:bg-default/60",
                   "!cursor-text",
                 ],
-                base: ["w-[50vw]", "mb-3"],
+                base: [ "mb-3", isMobile ? "w-[50vw]" : "w-full"],
               }}
               radius="lg"
             />
@@ -142,7 +155,7 @@ try {
                   "dark:group-data-[focused=true]:bg-default/60",
                   "!cursor-text",
                 ],
-                base: ["w-[50vw]", "mb-5"],
+                base: ["mb-5", isMobile ? "w-[50vw]" : "w-full"], 
               }}
               radius="lg"
             />

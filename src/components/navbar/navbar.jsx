@@ -11,13 +11,27 @@ import {
 } from "@nextui-org/react";
 import { FaCode } from "react-icons/fa";
 import "./navbar.css";
-// import { useState } from "react";
+import { useState, useEffect } from "react";
 // import ContactMeModal from "../modals/contactMeModal";
 // import ContactMeModalMobile from "../modals/contactMeModalMobile";
 
 export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
   const currentPage = useLocation().pathname;
   // const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const change = () => {
+      if (window.innerWidth <= 768) {
+        setIsMobile(false);
+      } else {
+        setIsMobile(true);
+      }
+    };
+    window.addEventListener("resize", change);
+    return () => window.removeEventListener("resize", change);
+  }, []);
 
   const navtabItems = [
     {
@@ -64,7 +78,7 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex justify-start gap-2">
+      <NavbarContent className={isMobile ? "hidden sm:flex justify-start gap-2" : "hidden sm:flex justify-start gap-2 ml-20"}>
         {navtabItems
           .map((navItem) => (
             <NavbarItem
