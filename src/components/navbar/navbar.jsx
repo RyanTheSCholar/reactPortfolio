@@ -107,7 +107,7 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
             <NavbarMenuItem key={mobileNavItems.id}>
               <NavtabLink
                 className="w-full text-Yellow-200"
-                to={mobileNavItems.path}
+                to="/Portfolio"
                 onClick={handleMenuItemClick}
               >
                 {mobileNavItems.pathname}
