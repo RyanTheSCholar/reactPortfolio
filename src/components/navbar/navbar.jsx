@@ -8,7 +8,6 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Link
 } from "@nextui-org/react";
 import { FaCode } from "react-icons/fa";
 import "./navbar.css";
@@ -86,7 +85,7 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
               key={navItem.id}
               className="portfolio-theme text-Yellow-200 font-bold flex"
             >
-              <Link
+              <NavtabLink
                 to={navItem.path}
                 className={
                   currentPage === navItem.path
@@ -95,7 +94,7 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
                 }
               >
                 {navItem.pathname}
-              </Link>
+              </NavtabLink>
             </NavbarItem>
           ))
           .slice(0, 4)}
