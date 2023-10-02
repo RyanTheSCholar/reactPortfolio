@@ -113,8 +113,7 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
                 {mobileNavItems.pathname}
               </NavtabLink>
             </NavbarMenuItem>
-          ))
-          .slice(0, 4)}
+          ))}
       </NavbarMenu>
     </Navbar>
   );
