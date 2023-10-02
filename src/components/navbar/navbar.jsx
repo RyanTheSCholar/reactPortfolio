@@ -37,22 +37,22 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
     {
       id: 1,
       path: "/",
-      pathname: "About",
+      name: "About",
     },
     {
       id: 2,
       path: "/Portfolio",
-      pathname: "Portfolio",
+      name: "Portfolio",
     },
     {
       id: 3,
       path: "/Resume",
-      pathname: "Resume",
+      name: "Resume",
     },
     {
       id: 4,
       path: "/Contact",
-      pathname: "Contact",
+      name: "Contact",
     },
   ];
   const handleMenuItemClick = () => {
@@ -93,7 +93,7 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
                     : "nav-link hover:text-Yellow-50 text-[26px]"
                 }
               >
-                {navItem.pathname}
+                {navItem.name}
               </NavtabLink>
             </NavbarItem>
           ))
@@ -107,10 +107,10 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
             <NavbarMenuItem key={mobileNavItems.id}>
               <NavtabLink
                 className="w-full text-Yellow-200"
-                to="/Portfolio"
+                to={mobileNavItems.path}
                 onClick={handleMenuItemClick}
               >
-                {mobileNavItems.pathname}
+                {mobileNavItems.name}
               </NavtabLink>
             </NavbarMenuItem>
           ))}
