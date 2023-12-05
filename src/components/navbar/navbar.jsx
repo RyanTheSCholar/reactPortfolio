@@ -78,7 +78,13 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className={isMobile ? "hidden sm:flex justify-start gap-2" : "hidden sm:flex justify-start gap-2 ml-20"}>
+      <NavbarContent
+        className={
+          isMobile
+            ? "hidden sm:flex justify-start gap-2"
+            : "hidden sm:flex justify-start gap-2 ml-20"
+        }
+      >
         {navtabItems
           .map((navItem) => (
             <NavbarItem
@@ -99,10 +105,9 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
           ))
           .slice(0, 4)}
       </NavbarContent>
-      <NavbarContent className="justify-center">
-      </NavbarContent>
+      <NavbarContent className="justify-center"></NavbarContent>
       <NavbarMenu className="gap-3 portfolio-theme bg-Blue-900">
-        {navtabItems
+        {/* {navtabItems
           .map((mobileNavItems) => (
             <NavbarMenuItem key={mobileNavItems.id}>
               <NavtabLink
@@ -113,7 +118,35 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
                 {mobileNavItems.name}
               </NavtabLink>
             </NavbarMenuItem>
-          ))}
+          ))} */}
+        <NavbarMenuItem>
+          <NavtabLink
+            className="w-full text-Yellow-200"
+            to="/"
+            onClick={handleMenuItemClick}
+          >About</NavtabLink>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <NavtabLink
+            className="w-full text-Yellow-200"
+            to="/Portfolio"
+            onClick={handleMenuItemClick}
+          >Portfolio</NavtabLink>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <NavtabLink
+            className="w-full text-Yellow-200"
+            to="/Resume"
+            onClick={handleMenuItemClick}
+          >Resume</NavtabLink>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <NavtabLink
+            className="w-full text-Yellow-200"
+            to="/Contact"
+            onClick={handleMenuItemClick}
+          >Contact</NavtabLink>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
