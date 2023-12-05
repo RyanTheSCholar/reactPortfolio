@@ -129,7 +129,7 @@ function Portfolio() {
       </div>
       {!isMobile && (
         <Button
-          className="prev portfolio-theme bg-Blue-900 text-Yellow-200 m-2"
+          className = "prev portfolio-theme bg-Blue-900 text-Yellow-200 m-2"
           onClick={() => paginate(1)}
         >
           <HiArrowSmRight className="w-[50px] h-[50px]" />
