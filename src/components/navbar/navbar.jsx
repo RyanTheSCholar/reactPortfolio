@@ -105,9 +105,20 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
           ))
           .slice(0, 4)}
       </NavbarContent>
-      
-      <NavbarMenu className="portfolio-theme bg-Blue-900">
-        <NavbarContent className ="flex-col">
+      <NavbarMenu className="portfolio-theme bg-Blue-900 flex-col text-center py-20">
+        {navtabItems
+          .map((mobileNavItems) => (
+            <NavbarMenuItem className="h-[75px]" key={mobileNavItems.id}>
+              <NavtabLink
+                className="w-full text-Yellow-200"
+                to={mobileNavItems.path}
+              >
+                {mobileNavItems.name}
+              </NavtabLink>
+            </NavbarMenuItem>
+          ))
+          .slice(0, 4)}
+        {/* <NavbarContent className ="flex-col">
         <NavbarMenuItem className="h-[75px]">
           <NavtabLink
             className="w-full text-Yellow-200"
@@ -136,7 +147,7 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
             onClick={handleMenuItemClick}
           >Contact</NavtabLink>
         </NavbarMenuItem>
-        </NavbarContent>
+        </NavbarContent> */}
       </NavbarMenu>
     </Navbar>
   );
