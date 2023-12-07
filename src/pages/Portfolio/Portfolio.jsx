@@ -63,84 +63,80 @@ function Portfolio() {
 
   const projectIndex = wrap(0, projectData.length, page);
 
-   return <><div>
-        
-   </div>
-          </>
-  //(
-  //   <Card
-  //     className="flex flex-row justify-center items-center h-[100vh] portfolio-theme bg-Yellow-200 flex-shrink-1"
-  //     {...handlers}
-  //   >
-  //     {!isMobile && (
-  //       <Button
-  //         className="next portfolio-theme bg-Blue-900 text-Yellow-200 m-2"
-  //         onClick={() => paginate(-1)}
-  //       >
-  //         <HiArrowSmLeft className="w-[50px] h-[50px]" />
-  //       </Button>
-  //     )}
-  //     <div>
-  //       <h1 className="flex justify-center text-Blue-900 font-bold text-[26px] items-center">
-  //         {projectData[projectIndex].projectName}
-  //       </h1>
-  //       {isMobile && (
-  //         <h2 className="flex justify-center text-Blue-900">
-  //           Swipe right or left for more content
-  //         </h2>
-  //       )}
-  //       <AnimatePresence initial={false} custom={direction} className="">
-  //         <motion.img
-  //           key={page}
-  //           src={projectData[projectIndex].image}
-  //           custom={direction}
-  //           variants={variants}
-  //           initial="enter"
-  //           animate="center"
-  //           className="my-3 w-[75rem] h-[40rem]"
-  //         />
-  //       </AnimatePresence>
-  //       <div className="flex justify-center items-center">
-  //         <Tooltip
-  //           placement="bottom"
-  //           content="Repository"
-  //           className="portfolio-theme bg-Blue-900 text-Yellow-200 rounded-full"
-  //         >
-  //           <a
-  //             href={projectData[projectIndex].githubRepo}
-  //             className="flex justify-center"
-  //             rel="noreferrer"
-  //             target="_blank"
-  //           >
-  //             <BsGithub className="portfolio-theme text-Blue-900 hover:text-Gray-200 w-[50px] h-[50px]" />
-  //           </a>
-  //         </Tooltip>
-  //         <Tooltip
-  //           placement="bottom"
-  //           content="Explore"
-  //           className="portfolio-theme bg-Blue-900 text-Yellow-200 rounded-full"
-  //         >
-  //           <a
-  //             href={projectData[projectIndex].linkToWebsite}
-  //             className="flex justify-center mx-3"
-  //             rel="noreferrer"
-  //             target="_blank"
-  //           >
-  //             <MdTransitEnterexit className="portfolio-theme text-Yellow-200 hover:bg-Gray-200 w-[50px] h-[50px] bg-Blue-900 rounded-full" />
-  //           </a>
-  //         </Tooltip>
-  //       </div>
-  //     </div>
-  //     {!isMobile && (
-  //       <Button
-  //         className = "prev portfolio-theme bg-Blue-900 text-Yellow-200 m-2"
-  //         onClick={() => paginate(1)}
-  //       >
-  //         <HiArrowSmRight className="w-[50px] h-[50px]" />
-  //       </Button>
-  //     )}
-  //   </Card>
-  // );
+  return (
+    <Card
+      className="flex flex-row justify-center items-center h-[100vh] portfolio-theme bg-Yellow-200 flex-shrink-1"
+      {...handlers}
+    >
+      {!isMobile && (
+        <Button
+          className="next portfolio-theme bg-Blue-900 text-Yellow-200 m-2"
+          onClick={() => paginate(-1)}
+        >
+          <HiArrowSmLeft className="w-[50px] h-[50px]" />
+        </Button>
+      )}
+      <div>
+        <h1 className="flex justify-center text-Blue-900 font-bold text-[26px] items-center">
+          {projectData[projectIndex].projectName}
+        </h1>
+        {isMobile && (
+          <h2 className="flex justify-center text-Blue-900">
+            Swipe right or left for more content
+          </h2>
+        )}
+        <AnimatePresence initial={false} custom={direction} className="">
+          <motion.img
+            key={page}
+            src={projectData[projectIndex].image}
+            custom={direction}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            className="my-3 w-[75rem] h-[40rem]"
+          />
+        </AnimatePresence>
+        <div className="flex justify-center items-center">
+          <Tooltip
+            placement="bottom"
+            content="Repository"
+            className="portfolio-theme bg-Blue-900 text-Yellow-200 rounded-full"
+          >
+            <a
+              href={projectData[projectIndex].githubRepo}
+              className="flex justify-center"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <BsGithub className="portfolio-theme text-Blue-900 hover:text-Gray-200 w-[50px] h-[50px]" />
+            </a>
+          </Tooltip>
+          <Tooltip
+            placement="bottom"
+            content="Explore"
+            className="portfolio-theme bg-Blue-900 text-Yellow-200 rounded-full"
+          >
+            <a
+              href={projectData[projectIndex].linkToWebsite}
+              className="flex justify-center mx-3"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <MdTransitEnterexit className="portfolio-theme text-Yellow-200 hover:bg-Gray-200 w-[50px] h-[50px] bg-Blue-900 rounded-full" />
+            </a>
+          </Tooltip>
+        </div>
+      </div>
+      {!isMobile && (
+        <Button
+          className = "prev portfolio-theme bg-Blue-900 text-Yellow-200 m-2"
+          onClick={() => paginate(1)}
+        >
+          <HiArrowSmRight className="w-[50px] h-[50px]" />
+        </Button>
+      )}
+    </Card>
+  );
 }
 
 export default Portfolio;

@@ -89,7 +89,7 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
           .map((navItem) => (
             <NavbarItem
               key={navItem.id}
-              className="portfolio-theme text-Yellow-200 font-bold flex"
+              className="portfolio-theme text-Yellow-200 font-bold flex mx-3"
             >
               <NavtabLink
                 to={navItem.path}
@@ -105,48 +105,38 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
           ))
           .slice(0, 4)}
       </NavbarContent>
-      <NavbarContent className="justify-center"></NavbarContent>
-      <NavbarMenu className="gap-3 portfolio-theme bg-Blue-900">
-        {/* {navtabItems
-          .map((mobileNavItems) => (
-            <NavbarMenuItem key={mobileNavItems.id}>
-              <NavtabLink
-                className="w-full text-Yellow-200"
-                to={mobileNavItems.path}
-                onClick={handleMenuItemClick}
-              >
-                {mobileNavItems.name}
-              </NavtabLink>
-            </NavbarMenuItem>
-          ))} */}
-        <NavbarMenuItem>
+      
+      <NavbarMenu className="portfolio-theme bg-Blue-900">
+        <NavbarContent className ="flex-col">
+        <NavbarMenuItem className="h-[75px]">
           <NavtabLink
             className="w-full text-Yellow-200"
             to="/"
             onClick={handleMenuItemClick}
           >About</NavtabLink>
         </NavbarMenuItem>
-        <NavbarMenuItem>
+        <NavbarMenuItem className="h-[75px]">
           <NavtabLink
             className="w-full text-Yellow-200"
             to="/Portfolio"
             onClick={handleMenuItemClick}
           >Portfolio</NavtabLink>
         </NavbarMenuItem>
-        <NavbarMenuItem>
+        <NavbarMenuItem className="h-[75px]">
           <NavtabLink
             className="w-full text-Yellow-200"
             to="/Resume"
             onClick={handleMenuItemClick}
           >Resume</NavtabLink>
         </NavbarMenuItem>
-        <NavbarMenuItem>
+        <NavbarMenuItem className="h-[75px]">
           <NavtabLink
             className="w-full text-Yellow-200"
             to="/Contact"
             onClick={handleMenuItemClick}
           >Contact</NavtabLink>
         </NavbarMenuItem>
+        </NavbarContent>
       </NavbarMenu>
     </Navbar>
   );
