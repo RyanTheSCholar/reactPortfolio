@@ -112,7 +112,6 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
               <NavtabLink
                 className="w-full text-Yellow-200"
                 to={mobileNavItems.path}
-                onClick={handleMenuItemClick}
               >
                 {mobileNavItems.name}
               </NavtabLink>
