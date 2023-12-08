@@ -65,7 +65,7 @@ try {
             <Input
               isRequired
               type="email"
-              label="Email"
+              label=""
               placeholder="Enter your email"
               value={email}
               name="email"
@@ -98,7 +98,7 @@ try {
             <Input
               isRequired
               type="text"
-              label="Name"
+              label=""
               placeholder="Enter your name"
               name="userName"
               value={userName}
@@ -131,7 +131,7 @@ try {
             <Textarea
               isRequired
               type="input"
-              label="Message"
+              label=""
               placeholder="Enter your message"
               name="message"
               value={message}
