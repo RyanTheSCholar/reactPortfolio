@@ -118,36 +118,6 @@ export default function Navtabs({ isMenuOpen, setIsMenuOpen }) {
             </NavbarMenuItem>
           ))
           .slice(0, 4)}
-        {/* <NavbarContent className ="flex-col">
-        <NavbarMenuItem className="h-[75px]">
-          <NavtabLink
-            className="w-full text-Yellow-200"
-            to="/"
-            onClick={handleMenuItemClick}
-          >About</NavtabLink>
-        </NavbarMenuItem>
-        <NavbarMenuItem className="h-[75px]">
-          <NavtabLink
-            className="w-full text-Yellow-200"
-            to="/Portfolio"
-            onClick={handleMenuItemClick}
-          >Portfolio</NavtabLink>
-        </NavbarMenuItem>
-        <NavbarMenuItem className="h-[75px]">
-          <NavtabLink
-            className="w-full text-Yellow-200"
-            to="/Resume"
-            onClick={handleMenuItemClick}
-          >Resume</NavtabLink>
-        </NavbarMenuItem>
-        <NavbarMenuItem className="h-[75px]">
-          <NavtabLink
-            className="w-full text-Yellow-200"
-            to="/Contact"
-            onClick={handleMenuItemClick}
-          >Contact</NavtabLink>
-        </NavbarMenuItem>
-        </NavbarContent> */}
       </NavbarMenu>
     </Navbar>
   );

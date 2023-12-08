@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unknown-property */
 import { Card, Button } from "@nextui-org/react";
-import CV from "../../assets/Resume.pdf";
+import CV from "../../assets/ResumeV6.pdf";
 import { BsDownload } from "react-icons/bs";
-import { useState } from "react";
+
 
 export default function Resume() {  
     const serverSideMap = [
